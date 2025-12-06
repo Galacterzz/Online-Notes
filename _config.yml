@@ -1,0 +1,40 @@
+title: Data Science Portfolio
+email: your-email@example.com
+description: Welcome to my data science portfolio
+baseurl: ""
+url: "https://yourusername.github.io"
+github_username: yourusername
+linkedin_username: your-linkedin
+twitter_username: your-twitter
+kaggle_username: your-kaggle
+medium_username: your-medium
+reddit_username: your-reddit
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections for projects, blogs, and notes
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  blogs:
+    output: true
+    permalink: /blogs/:path/
+  notes:
+    output: true
+    permalink: /notes/:path/
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
