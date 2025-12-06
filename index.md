@@ -3,183 +3,191 @@ layout: default
 title: Home
 ---
 
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <a href="{{ site.baseurl }}/">Data Science Portfolio</a>
-        </div>
-        <div class="nav-menu" id="nav-menu">
-            <a href="{{ site.baseurl }}/" class="nav-links">About Me</a>
-            <a href="{{ site.baseurl }}/projects" class="nav-links">Projects</a>
-            <a href="{{ site.baseurl }}/blogs" class="nav-links">Blogs</a>
-            <a href="{{ site.baseurl }}/notes" class="nav-links">Notes</a>
-            <a href="#contact" class="nav-links">Contact Me</a>
-        </div>
-        <div class="nav-toggle" id="nav-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </div>
-</nav>
-
 <!-- Main Content -->
 <div class="main-container">
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="profile-section">
-                <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Profile Picture" class="profile-img">
-            </div>
-            <div class="bio-section">
-                <h1>Your Name</h1>
-                <h2>Data Scientist</h2>
-                
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> your-email@example.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Your Location</p>
-                    <p><i class="fas fa-globe"></i> <a href="#">your-website.com</a></p>
-                </div>
-                
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-medium"></i></a>
-                    <a href="#"><i class="fab fa-kaggle"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-reddit"></i></a>
-                </div>
-                
-                <p class="bio">
-                    I am a passionate Data Scientist with expertise in machine learning, statistical analysis, and data visualization. 
-                    I love turning complex data into actionable insights and building models that solve real-world problems.
-                </p>
-            </div>
-        </div>
-    </section>
+    <header class="page-header">
+      <div class="container">
+        <div class="header-top flex-responsive">
+          <div class="profile-section">
+            <img class="profile-img"
+                 width="256"
+                 height="256"
+                 src="{{ '/assets/img/profile.jpg' | relative_url }}"
+                 alt="Your Name Profile Image" />
+          </div>
+          <div class="bio-section">
+            <h1>Your Name</h1>
+            <h2 class="header-label">Data Scientist</h2>
 
-    <!-- Experience and Skills Section -->
-    <section class="experience-section">
-        <div class="experience-container">
-            <div class="experience-left">
-                <h2 class="section-title">WORK EXPERIENCE</h2>
-                
-                <div class="job">
-                    <h3>Data Scientist</h3>
-                    <h4>Company Name</h4>
-                    <p class="date">Jan 2022 - Present</p>
-                    <ul>
-                        <li>Developed machine learning models to improve business processes</li>
-                        <li>Created data visualizations and dashboards for stakeholders</li>
-                        <li>Collaborated with cross-functional teams to deliver solutions</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <h3>Junior Data Analyst</h3>
-                    <h4>Previous Company</h4>
-                    <p class="date">Jun 2020 - Dec 2021</p>
-                    <ul>
-                        <li>Performed data cleaning and preprocessing tasks</li>
-                        <li>Conducted statistical analysis and A/B testing</li>
-                        <li>Prepared reports and presentations for management</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="experience-right">
-                <div class="education">
-                    <h3>Education</h3>
-                    <h4>Masters in Data Science</h4>
-                    <p>University Name, Location</p>
-                    <p>Honors: Summa Cum Laude</p>
-                </div>
-                
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <div class="skill-item">
-                        <span>Python</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span>R</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span>Machine Learning</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span>Data Visualization</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span>SQL</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="interests">
-                    <h3>Interests</h3>
-                    <p>Deep Learning, Natural Language Processing, Computer Vision</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <address>
+              <ul class="contact-info inline-list flex-responsive">
+                <li>
+                  <a href="mailto:your-email@example.com">your-email@example.com</a>
+                </li>
+                <li>
+                  <a href="tel:123-456-7890">123-456-7890</a>
+                </li>
+                <li>City, State, Country</li>
+              </ul>
+            </address>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <h2 class="section-title">FEATURED PROJECTS</h2>
-        <div class="projects-grid">
+            <ul class="social-links inline-list flex-responsive">
+              <li>
+                <a href="#" rel="noopener noreferrer" aria-label="Personal Website" class="link-with-icon">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+                  </svg>
+                  Personal Website
+                </a>
+              </li>
+
+              <li>
+                <a href="#" rel="noopener noreferrer" aria-label="LinkedIn" class="link-with-icon">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </li>
+
+              <li>
+                <a href="#" rel="noopener noreferrer" aria-label="GitHub" class="link-with-icon">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                  </svg>
+                  GitHub
+                </a>
+              </li>
+            </ul>
+
+            <p class="bio">I am a passionate Data Scientist with expertise in machine learning, statistical analysis, and data visualization. I love turning complex data into actionable insights and building models that solve real-world problems.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="container">
+        <main>
+          <section>
+            <h2 class="section-heading">Work Experience</h2>
+
+            <section>
+              <h3>Data Scientist at <a href="#">Company Name</a></h3>
+              <p class="date">Jan 2022 - Present</p>
+              <p>Developed machine learning models to improve business processes</p>
+              <ul>
+                <li>Developed machine learning models to improve business processes</li>
+                <li>Created data visualizations and dashboards for stakeholders</li>
+                <li>Collaborated with cross-functional teams to deliver solutions</li>
+              </ul>
+            </section>
+
+            <section>
+              <h3>Junior Data Analyst at <a href="#">Previous Company</a></h3>
+              <p class="date">Jun 2020 - Dec 2021</p>
+              <p>Performed data cleaning and preprocessing tasks</p>
+              <ul>
+                <li>Performed data cleaning and preprocessing tasks</li>
+                <li>Conducted statistical analysis and A/B testing</li>
+                <li>Prepared reports and presentations for management</li>
+              </ul>
+            </section>
+          </section>
+
+          <section>
+            <h2 class="section-heading">Projects</h2>
             {% for project in site.projects limit:4 %}
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-image">
-                        <img src="{{ project.image | default: '/assets/img/default-project.jpg' }}" alt="{{ project.title }}">
-                    </div>
-                    <div class="project-details">
-                        <h3>{{ project.title }}</h3>
-                        <p>{{ project.description }}</p>
-                        <div class="project-tech">
-                            {% for tech in project.tech %}
-                            <span class="tech-tag">{{ tech }}</span>
-                            {% endfor %}
-                        </div>
-                        <a href="{{ project.url }}" class="project-link">View Project</a>
-                    </div>
-                </div>
-            </div>
+            <section>
+              <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+              <p>{{ project.description }}</p>
+              <ul>
+                {% for tech in project.tech %}
+                <li>{{ tech }}</li>
+                {% endfor %}
+              </ul>
+            </section>
             {% endfor %}
-        </div>
-    </section>
+          </section>
+        </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <h2 class="section-title">GET IN TOUCH</h2>
-            <p>Feel free to reach out if you're looking for a data scientist, have a question, or just want to connect.</p>
-            <p><strong>Email:</strong> {{ site.email }}</p>
-            <a href="mailto:{{ site.email }}" class="contact-btn">Send Email</a>
-        </div>
-    </section>
+        <!-- Sidebar Section -->
+        <aside>
+          <section>
+            <h2 class="section-heading">Education</h2>
+            <section>
+              <h3><a href="#">Masters in Data Science</a></h3>
+              <p class="section-label">University Name, Location</p>
+              <h4>Degrees</h4>
+              <ul>
+                <li>Masters in Data Science</li>
+              </ul>
+              <h4>Honors</h4>
+              <ul>
+                <li>Summa Cum Laude</li>
+              </ul>
+            </section>
+          </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; {{ site.time | date: '%Y' }} Data Science Portfolio. All rights reserved.</p>
-    </footer>
+          <section>
+            <h2 class="section-heading">Skills</h2>
+            <ul class="unstyled-list">
+              <li>
+                <h3>Python</h3>
+                <div class="skill-bar">
+                  <div class="skill-level w-90" role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill-level-label">Expert</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>R</h3>
+                <div class="skill-bar">
+                  <div class="skill-level w-80" role="meter" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill-level-label">Advanced</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>Machine Learning</h3>
+                <div class="skill-bar">
+                  <div class="skill-level w-85" role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill-level-label">Expert</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>Data Visualization</h3>
+                <div class="skill-bar">
+                  <div class="skill-level w-75" role="meter" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill-level-label">Advanced</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>SQL</h3>
+                <div class="skill-bar">
+                  <div class="skill-level w-85" role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill-level-label">Expert</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="section-heading">Interests</h2>
+            <section>
+              <h3>Deep Learning</h3>
+              <p>Researching neural networks and deep learning models</p>
+            </section>
+            <section>
+              <h3>Natural Language Processing</h3>
+              <p>Exploring text analysis and language models</p>
+            </section>
+          </section>
+        </aside>
+      </div>
+    </div>
 </div>

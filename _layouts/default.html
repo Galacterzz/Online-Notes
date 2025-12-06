@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Info -->
     <title>{{ page.title }} - Data Science Portfolio</title>
+    <meta name="description" content="Data Science Portfolio - A collection of projects, blogs, and notes by a passionate data scientist.">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ page.title }} - Data Science Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/assets/img/profile.jpg">
+    <meta property="og:image:alt" content="Profile Image">
+
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- MathJax for math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
+
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="{{ site.baseurl }}/">{{ site.title | default: "Data Science Portfolio" }}</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="{{ site.baseurl }}/" class="nav-links">About Me</a>
+                <a href="{{ site.baseurl }}/projects" class="nav-links">Projects</a>
+                <a href="{{ site.baseurl }}/blogs" class="nav-links">Blogs</a>
+                <a href="{{ site.baseurl }}/notes" class="nav-links">Notes</a>
+                <a href="{{ site.baseurl }}/#contact" class="nav-links">Contact Me</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
     {{ content }}
+    
+    <footer class="page-footer">
+      <div class="container">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title | default: "Data Science Portfolio" }}. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
