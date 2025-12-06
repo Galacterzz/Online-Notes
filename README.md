@@ -1,2 +1,2 @@
-# Online-Notes
-This repo will contain my notes on varies concepts which i learn in my life as an aspiring data scientist
+# Personal Portfolio website
+This would be a jekyll website which will show my experience, projects and blogs on my website using github pages.
