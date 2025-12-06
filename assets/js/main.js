@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.job, .project-card, .blog-card, .note-card').forEach(el => {
         observer.observe(el);
     });
+    
+    // Initialize skill bar animations
+    animateSkillBars();
 });
 
 // Function to set up filtering for projects, blogs, and notes
@@ -121,7 +124,7 @@ function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-level');
     
     skillBars.forEach(bar => {
-        const targetWidth = bar.style.width;
+        const targetWidth = bar.style.width || getComputedStyle(bar).width;
         bar.style.width = '0';
         
         // Animate when element is in view
@@ -138,6 +141,3 @@ function animateSkillBars() {
         observer.observe(bar);
     });
 }
-
-// Initialize skill bar animations
-document.addEventListener('DOMContentLoaded', animateSkillBars);
