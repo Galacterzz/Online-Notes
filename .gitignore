@@ -1,0 +1,30 @@
+```
+# Dependencies
+vendor/
+.bundle/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Jekyll/GitHub Pages build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```

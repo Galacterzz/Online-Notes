@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Projects - Data Science Portfolio</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="{{ site.baseurl }}/">Data Science Portfolio</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="{{ site.baseurl }}/" class="nav-links">About Me</a>
+                <a href="{{ site.baseurl }}/projects" class="nav-links">Projects</a>
+                <a href="{{ site.baseurl }}/blogs" class="nav-links">Blogs</a>
+                <a href="{{ site.baseurl }}/notes" class="nav-links">Notes</a>
+                <a href="{{ site.baseurl }}/#contact" class="nav-links">Contact Me</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <div class="page-container">
+        <article class="project-content-page">
+            <h1>{{ page.title }}</h1>
+            <p class="project-meta">
+                <i class="far fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}
+                <span class="tags">
+                    {% for tag in page.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </span>
+            </p>
+            <div class="project-body">
+                {{ content }}
+            </div>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; {{ site.time | date: '%Y' }} Data Science Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

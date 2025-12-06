@@ -1,0 +1,40 @@
+---
+permalink: /404.html
+layout: default
+title: Page Not Found
+---
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="{{ site.baseurl }}/">Data Science Portfolio</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="{{ site.baseurl }}/" class="nav-links">About Me</a>
+            <a href="{{ site.baseurl }}/projects" class="nav-links">Projects</a>
+            <a href="{{ site.baseurl }}/blogs" class="nav-links">Blogs</a>
+            <a href="{{ site.baseurl }}/notes" class="nav-links">Notes</a>
+            <a href="{{ site.baseurl }}/#contact" class="nav-links">Contact Me</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+<!-- 404 Content -->
+<div class="page-container">
+    <div class="error-content">
+        <h1>404: Page Not Found</h1>
+        <p>Sorry, the page you're looking for doesn't exist.</p>
+        <a href="{{ site.baseurl }}/" class="error-link">Return to Home</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; {{ site.time | date: '%Y' }} Data Science Portfolio. All rights reserved.</p>
+</footer>
